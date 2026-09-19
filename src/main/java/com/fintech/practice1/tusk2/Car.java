@@ -2,7 +2,7 @@ package com.fintech.practice1.tusk2;
 
 public class Car {
     //Поля
-    final int CURRENT_YEAR = 2026;
+    final static int CURRENT_YEAR = 2026; //static чтобы не засорять обьекты класса
     private String model;
     private String license;
     private String color;
@@ -16,7 +16,7 @@ public class Car {
         return license;
     }
     public String getColor(){
-        return model;
+        return color;
     }
     public int getYear(){
         return year;
@@ -63,7 +63,7 @@ public class Car {
     }
 
     //Возраст авто
-    public int age(){
+    public int getAge(){
         return CURRENT_YEAR - this.year;
     }
 }
