@@ -1,4 +1,4 @@
-package com.fintech.practice2.vehicles;
+package com.fintech.practice2.tusk2.vehicles;
 
 public abstract class Vehicle {
     //Поля - все приватные для инкапсуляции, кроме engineType - оно protected для наследования по условию
@@ -56,6 +56,29 @@ public abstract class Vehicle {
         this.engineType = engineType;
     }
 
-    //Метод получения типа транспортного средства
+    //Полный конструктор (кроме engineType т.к. он задается в конструкторе дочернего класса)
+    public Vehicle(String model, String license, String color, String year, String ownerName, String insuranceNumber) {
+        this.model = model;
+        this.license = license;
+        this.color = color;
+        this.year = year;
+        this.ownerName = ownerName;
+        this.insuranceNumber = insuranceNumber;
+    }
+
+    //Метод (абстрактный, поэтому без тела) получения типа транспортного средства
     public abstract String vehicleType();
+
+    //Переопределенный для удобства toString
+    @Override
+    public String toString() {
+        return "Транспорт " +
+                "модели " + model + '\n' +
+                "с номером лицензии " + license + '\n' +
+                "цвета " + color + '\n' +
+                year + " года\n" +
+                "владельца " + ownerName + '\n' +
+                "со страховкой " + insuranceNumber + '\n' +
+                "с двигателем " + engineType;
+    }
 }
