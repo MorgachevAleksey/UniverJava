@@ -10,8 +10,8 @@ public class ElectricCar extends Car {
         this.batteryCapacity = batteryCapacity;
     }
 
-    //Идиоматично через констурктор
-    public ElectricCar(){
-        super.setEngineType("Electric");
+    //Идиоматично задать поле материнского класса через констурктор
+    {
+        setEngineType("Electric");
     }
 }

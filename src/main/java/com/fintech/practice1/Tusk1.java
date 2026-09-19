@@ -1,4 +1,4 @@
-package com.fintech.practice1.tusk2;
+package com.fintech.practice1;
 
 import java.util.Scanner;
 
@@ -11,21 +11,23 @@ public class Tusk1 {
         String message;
 
         Scanner scan = new Scanner(System.in);
-        String syuan = scan.nextLine();
-        yuan = Integer.valueOf(syuan);
+        String stringYuan = scan.nextLine();
+        yuan = Integer.valueOf(stringYuan);
 
+        //По условию задачи - double, но финансовые расчеты корректно производить ТОЛЬКО в BigDecimal
         roubles = ROUBLES_PER_YUAN * yuan;
         digit = yuan % 10;
+        //По условию задачи склоняется по последней цифре, но корректнее - по двум последним
         if (digit == 1){
-            message = "Йена";
+            message = "Юань";
         }
-        else if (digit == 2 || digit == 3 || digit ==4){
-            message = "Йены";
+        else if (digit == 2 || digit == 3 || digit == 4){
+            message = "Юаня";
         } else {
-            message = "Йен";
+            message = "Юаней";
         }
 
-        System.out.println("Vi polozili " + yuan + message);
-        System.out.println("Result in roubles: " + roubles  );
+        System.out.println("Сумма: " + yuan + " " + message);
+        System.out.println("В пересчете на рубли: " + roubles);
     }
 }

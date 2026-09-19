@@ -1,16 +1,16 @@
-package com.fintech.practice2.vehicles;
+package com.fintech.practice2.tusk1.vehicles;
 
-public class Car extends Vehicle {
+public class Car{
     //Поля
     private String ownerName;
-    private String insuranceNumber;
+    private int insuranceNumber;
     protected String engineType;
 
     //Геттеры
     public String getOwnerName(){
         return ownerName;
     }
-    public String getInsuranceNumber(){
+    public int getInsuranceNumber(){
         return insuranceNumber;
     }
     public String getEngineType(){
@@ -21,19 +21,17 @@ public class Car extends Vehicle {
     public void setOwnerName(String ownerName){
         this.ownerName = ownerName;
     }
-    public  void setInsuranceNumber(String insuranceNumber){
+    public  void setInsuranceNumber(int insuranceNumber){
         this.insuranceNumber = insuranceNumber;
     }
     public void setEngineType(String engineType){
         this.engineType = engineType;
     }
 
-    //Конструктор
-
-    //Реализация абстрактного метода материнского класса
-    @Override
-    public String vehicleType() {
-        return "Car";
+    //Конструктор (инициализирует только поля владельца и лицензии) по условию
+    public Car(String ownerName, int insuranceNumber){
+        this.ownerName = ownerName;
+        this.insuranceNumber = insuranceNumber;
     }
 }
 

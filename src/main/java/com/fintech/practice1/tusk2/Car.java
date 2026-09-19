@@ -2,10 +2,11 @@ package com.fintech.practice1.tusk2;
 
 public class Car {
     //Поля
-    String model;
-    String license;
-    String color;
-    int year;
+    final int CURRENT_YEAR = 2026;
+    private String model;
+    private String license;
+    private String color;
+    private int year;
 
     //Геттеры
     public String getModel(){
@@ -45,21 +46,24 @@ public class Car {
         this. color =color;
         this.year = year;
     }
+    //Конструктор с произвольными полями (выбраны модель и год)
     public Car(String model, int year){
         this.model = model;
         this.year = year;
     }
 
-    //Переопределение туСтринг
+    //Переопределение toString (идеоматичнее чем писать новый to_String())
     @Override
     public String toString() {
-        return "Bibika " +
-                "modeli " + model + '\n' +
-                year + " goda";
+        return "Бибика " +
+                "модели " + model + '\n' +
+                "с номером лицензии " + license + '\n' +
+                "цвета " + color + '\n' +
+                year + " года";
     }
 
-    //Ворзраст авто
+    //Возраст авто
     public int age(){
-        return 2026 - this.year;
+        return CURRENT_YEAR - this.year;
     }
 }
