@@ -43,7 +43,7 @@ public class Car {
     public Car(String model, String license, String color, int year){
         this.model = model;
         this.license = license;
-        this. color =color;
+        this.color = color;
         this.year = year;
     }
     //Конструктор с произвольными полями (выбраны модель и год)

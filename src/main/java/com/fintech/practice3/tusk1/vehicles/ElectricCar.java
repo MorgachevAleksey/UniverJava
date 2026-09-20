@@ -14,12 +14,17 @@ public class ElectricCar extends Car implements ElectricVehicle{
     }
 
     public ElectricCar(){
-
+        setEngineType("Electric");
     }
     //Цепочка конструкторов как в предыдущих практиках (ElcectricCar -> Car -> Vechicle)
     public ElectricCar(String model, String license, String color, int year, String ownerName, String insuranceNumber, int batteryCapacity){
         super(model, license, color, year, ownerName, insuranceNumber);
         setEngineType("Electric");
         this.batteryCapacity = batteryCapacity;
+    }
+
+    @Override
+    public String vehicleType() {
+        return "Electric Car";
     }
 }
