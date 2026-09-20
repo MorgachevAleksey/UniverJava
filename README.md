@@ -20,4 +20,9 @@
 ---
 ## Практика 3
 
-1) 
+1) Пакеты: vehicles (Vehicle, Car, ElectricCar, ElectricVehicle) + app (TestCar).
+   Vehicle — абстрактный класс: поля model, license, color, year, ownerName, insuranceNumber, engineType, геттеры/сеттеры на все, toString(), абстрактный vehicleType().
+   Car extends Vehicle: конструктор задаёт engineType = "Combustion", vehicleType() возвращает "Car".
+   ElectricCar extends Car implements ElectricVehicle: поле batteryCapacity + геттер/сеттер, конструктор задаёт engineType = "Electric".
+   ElectricVehicle — интерфейс с методами getBatteryCapacity() и setBatteryCapacity().
+   TestCar: создать объекты Car и ElectricCar, изменить год и имя владельца, изменить страховой номер, получить ёмкость батареи, вывести оба объекта через toString().

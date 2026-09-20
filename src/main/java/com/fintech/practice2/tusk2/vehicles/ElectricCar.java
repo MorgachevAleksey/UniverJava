@@ -20,6 +20,6 @@ public class ElectricCar extends Car {
 
     @Override
     public String vehicleType(){
-        return "ElectricCar";
+        return "Electric Car";
     }
 }
