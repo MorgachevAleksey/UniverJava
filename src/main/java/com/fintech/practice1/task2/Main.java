@@ -1,0 +1,17 @@
+package com.fintech.practice1.task2;
+
+public class Main {
+    public static void main(String[] args){
+        //Полный конструктор
+        Car car1 = new Car("Porshe", "License number", "Silver", 2000);
+        //По умолчанию
+        Car car2 = new Car();
+        //Частичный
+        Car car3 = new Car("Toyota", 2010);
+
+        System.out.println(car1); //toString не требует явного вызова
+        System.out.println("Возраст машинки " + car1.getAge() + " лет");
+        System.out.println(car2);
+        System.out.println(car3);
+    }
+}
