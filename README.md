@@ -43,6 +43,10 @@
 ---
 ## Практика 4
 
-1) 
+1) - Triangle extends GeometricObject: 3 стороны double (по умолчанию 1.0), 2 конструктора, геттеры, getArea() (Герон), getPerimeter(), toString(). Test: ввод сторон/цвета/заливки → вывод площади, периметра, цвета, заливки.
+   - IllegalTriangleException extends Exception (checked). Конструктор Triangle(...) объявляет throws и бросает, если сумма двух сторон ≤ третьей.
+   - Абстрактный GeometricObject implements Comparable + статический max(). Проверка max() на двух кругах и двух прямоугольниках. ComparableCircle extends Circle implements Comparable — найти max из двух кругов и max между кругом и прямоугольником через compareTo().
+   - Интерфейс Colorable с howToColor(). Square extends GeometricObject implements Colorable, поле side + геттер/сеттер, 2 конструктора. Тест: массив из 5 GeometricObject, для каждого — площадь, и howToColor() если применимо.
 
-2)
+2) - Два массива: String[] months (12 месяцев), int[] dom (дней в месяце). Пользователь вводит целое 1–12 → вывести месяц и число дней. При недопустимом числе — поймать ArrayIndexOutOfBoundsException и вывести «Недопустимое число». Ввод не-целого числа не должен ломать программу.
+   - Дополнить: при выборе февраля — запросить год. Добавить метод проверки високосного года, изменить вывод количества дней в феврале.
